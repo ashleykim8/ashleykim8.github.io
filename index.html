@@ -4,30 +4,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
   <title>Ashley Kim's Portfolio</title>
 </head>
 
 <body>
-  <!-- <nav class='header'>
-    <ul>
-      <li><a class='home' href='#top'>FAVORITE FONTS</a></li>
-      <li><a class='pagelink' href='#serif'>SERIF</a></li>
-      <li><a class='pagelink' href='#sans'>SANS-SERIF</a></li>
-      <li><a class='pagelink' href='#mono'>MONOSPACED</a></li>
-    </ul>
-  </nav> -->
-  <div class="navigation">
-    <a href="./resources/public/index.html">Home</a>
-    <a href="./resources/public/about.html">About Me</a>
-    <a href="./resources/public/contact.html">Contact Me</a>
-    <a href="./resources/public/resume.html">Resume</a>
-  </div>
-  <h1>Hi, I'm Ashley!</h1>
-  <h2>Welcome to my website.</h2>
-  <h3>My Recent Work</h3>
-  <p>Here are a few past design projects I've worked on.</p>
-  <h3><a href="./PROJECT_LINK"><img src="./PICTURE" height="200" alt="picture of X project" /></a></h3>
+  <header>
+    <nav class="navigation">
+      <a href="index.html" class="home">Ashley Kim</a>
+      <ul class="navlist">
+        <li><a href="#about" class="navlink">About Me</a></li>
+        <li><a href="#projects" class="navlink">Projects</a></li>
+        <li><a href="./resources/public/resume.html" class="navlink">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1>Hi, I'm Ashley!</h1>
+        <h2>Creative Problem Solver and Front-End Developer</h2>
+        <p>I'm a Computer Science and Mathematics junior at Harvey Mudd College 
+            who loves finding creative ways to solve problems. 
+            Whether it's building software, designing games, or creating learning tools, I'm passionate 
+            about working on meaningful projects. I'm mindful of the social impact of my work and strive to 
+            create solutions that add value to people's lives.</p>
+        <a href="#projects" class="button">View My Work</a>
+      </div>
+      <div class="hero-picture">
+        <img src="./resources/public/Ashley.jpg" alt="profile image of ashley kim" />
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="project-container">
+      <h2>Selected Works</h2>
+      <div class="work-grid">
+        <div class="work-item">
+          <a href="./resources/public/theo-mech.html">
+            <img src="./resources/public/theo-mech.jpg" alt="cover image of applet graphs" />
+          </a>
+          <div class="work-title">
+            <h3>Theo-Mech Applet</h3>
+            <p>Explore graphs and interactive models for theoretical mechanics.</p>
+          </div>
+        </div>
+        <div class="work-item">
+          <a href="./resources/public/apy.html">
+            <img src="./resources/public/apy.jpg" alt="cover image for APy Interactive Project" />
+          </a>
+          <div class="work-title">
+            <h3>APy Project</h3>
+            <p>An interactive Python-based project showcasing advanced data analysis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>© Ashley Kim. All rights reserved.</p>
