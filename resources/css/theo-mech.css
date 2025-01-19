@@ -50,3 +50,11 @@ header {
 .navlink:hover {
   color: #3b11df;
 }
+
+.div-container {
+  text-align: center;
+  font-size: 1.5rem;
+  padding-top: 100px;
+  color: #3B1E54;
+  text-overflow: wrap;
+}
