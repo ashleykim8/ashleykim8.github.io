@@ -5,6 +5,13 @@
   box-sizing: border-box;
 }
 
+.image {
+  margin: 40px auto;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+
 body {
   font-size: 12pt;
   background-color: #EEEEEE;

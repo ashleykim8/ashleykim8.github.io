@@ -10,7 +10,6 @@ body {
   background-color: #EEEEEE;
 }
 
-/* Navbar */
 header {
   top: 0;
   padding: 20px;
@@ -54,11 +53,10 @@ header {
 section {
   display: block;
   padding: 30px;
-  height: 100vh;
-  scroll-margin-top: 67.5px; /* use inspect to see high of nav*/
+  min-height: 100vh; 
+  scroll-margin-top: 67.5px;
 }
 
-/* Hero Section */
 #hero {
   display: flex;
   padding-top: 100px;
@@ -70,6 +68,9 @@ section {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 30px; 
 }
 
 .hero-content {
@@ -106,7 +107,6 @@ section {
   text-decoration: none;
   color: #6C567B;
   background-color: #EEEEEE;
-  
 }
 
 .button:hover {
@@ -135,11 +135,11 @@ section {
   .hero-content h1{
     font-size: 2.5rem;
   }
-  
+
   .hero-content h2 {
     font-size: 1.25rem;
   }
-  
+
   .hero-content p {
     font-size: 0.8rem;
   }
@@ -160,15 +160,15 @@ section {
   }
 }
 
-/* Project Section */
-
 #projects {
   padding: 50px;
   background: linear-gradient(-80deg, #3c5c94, #9b8ec5);
 }
 
-.projects-container {
+.project-container { 
   text-align: center;
+  max-width: 1200px; 
+  margin: 0 auto; 
 }
 
 .project-container h2 {
@@ -180,17 +180,20 @@ section {
 
 .work-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 30px; 
+  padding: 0 10px; 
 }
 
 .work-item {
   background-color: #EEEEEE;
-  flex-grow: 1;
+  flex-grow: 1; 
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 8px 10px 5px rgba(14, 10, 24, 0.2);
   transition: transform 0.25s ease-in-out;
+  display: flex; 
+  flex-direction: column; 
 }
 
 .work-item:hover {
@@ -200,6 +203,9 @@ section {
 .work-title {
   padding: 15px;
   text-align: center;
+  flex-grow: 1; 
+  display: flex; 
+  flex-direction: column;
 }
 
 .work-title h3 {
@@ -215,30 +221,10 @@ section {
 
 .work-item img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  /* height: 350px; */
-  object-fit: cover;
-} 
-
-#apy {
-  object-position: left center;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 10px 10px 0 0; 
 }
-
-/* @media (max-width: 600px) {
-  .work-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .work-title h3 {
-    font-size: 1.2rem;
-  }
-
-  .work-title p {
-      font-size: 0.9rem;
-  }
-} */
 
 footer {
   padding-left: 40px;
@@ -247,55 +233,37 @@ footer {
   background-color: #d6d5f2;
 }
 
-/* .project-video {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  overflow: hidden;
-  object-position: left center;
-} */
-
 @media screen and (max-width: 1024px) {
   .work-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; /
+    padding: 0 15px;
   }
 }
 
 @media screen and (max-width: 950px) {
   .work-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
     gap: 15px;
-    padding: 10px;
+    padding: 0 10px;
   }
-
 }
 
-
 @media screen and (max-width: 650px) {
-  /* .work-grid { */
-    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 15px;
-    padding: 10px; */
-  /* } */
+  .work-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    padding: 0 20px; 
+  }
+  .work-item {
+    max-width: 400px; 
+    margin: 0 auto; 
+  }
   .work-title h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem; 
   }
 
   .work-title p {
-      font-size: 0.9rem;
+      font-size: 0.9rem; 
   }
-}
-
-@media screen and (max-width: 480px) {
-
-  /* .work-grid {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    gap: 15px;
-    padding: 10px;
-  } */
-  
-  /* check out mobile responsiveness */
-
 }
