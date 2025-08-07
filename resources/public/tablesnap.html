@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-  <link href="../css/tablesnap.css" type="text/css" rel="stylesheet">
+  <link href="../css/projects.css" type="text/css" rel="stylesheet">
   <title>Table Detection</title>
 </head>
 <body>
@@ -23,13 +23,13 @@
   <div class="div-container">
     <h2>Table Detection Model: Digitizing Structured Data from Documents</h2>
     <img src="./images/tablesnap.jpg" alt="background image for tablesnap" class="image"/>
-    <p class = "description"> This project focuses on a critical task in document analysis: table detection in document images. Our long-term objective is to enable the digitization of handwritten data tables from images directly into a structured CSV format. My contribution centers on accurately detecting table structures using advanced object detection techniques.
+    <p class = "description"> This project focuses on a critical task in document analysis: table detection in document images. Our long-term objective is to enable the digitization of handwritten data tables from images directly into a structured CSV format. This project centers on accurately detecting table structures using advanced object detection techniques.
     </p>
     <p class="description">
-      Building on established research like CascadeTabNet and DeCNT, our approach leverages deep learning to identify tables within images. I was instrumental in the data preprocessing phase, extracting and normalizing bounding box values relative to image dimensions, as well as finetuning the YOLOv5 model. The General Table Detection dataset was prepared, with a 70/20/10 split for training, validation, and testing, respectively.
+      Building on established research like CascadeTabNet and DeCNT, our approach leverages deep learning to identify tables within images. I was instrumental in the data preprocessing phase, extracting and normalizing bounding box values relative to image dimensions, as well as finetuning the YOLOv5 model. The General Table Detection dataset was prepared, with a 70/20/10 split for training, validation, and testing.
     </p>
     <p class="description">
-      For our baseline, we utilized YOLOv5, chosen for its efficiency in image preprocessing (padding, resizing, normalization) and its robust pre-trained features. Recognizing the relatively limited size of our specific table detection dataset, I led the effort to fine-tune the YOLOv5 model. This involved increasing the number of training epochs and carefully decreasing the learning rate, allowing us to build upon YOLOv5's general feature learning and adapt it precisely to our domain. This fine-tuning process resulted in a significant 13.7% improvement in mean Average Precision (mAP@0.5) over the baseline, demonstrating the effectiveness of our targeted approach.
+      For our baseline, we utilized YOLOv5, chosen for its efficiency in image preprocessing (padding, resizing, normalization) and its robust pre-trained features. Recognizing the relatively limited size of our specific table detection dataset (~2000 samples), I led the effort to fine-tune the YOLOv5 model. This involved increasing the number of training epochs and carefully decreasing the learning rate, allowing us to build upon YOLOv5's general feature learning and adapt it precisely to our domain. This fine-tuning process resulted in a significant 13.7% improvement in mean Average Precision (mAP@0.5) over the baseline, demonstrating the effectiveness of our targeted approach.
     </p>
     <p class="description">
       This project has deepened my expertise in:
@@ -45,11 +45,16 @@
         <strong>Evaluation:</strong> Rigorous assessment of model performance using metrics like mAP.</li>
     </ul>
     <p class="description">
+      Below is an example table detection prediction and associated accuracy value on our test data:
+    </p>
+    <img src="./images/prediction.png" alt="example table prediction from our fine-tuned model" class="image" width="500"/>
+    <p class="description">
       As a next step, we aim to extend this model to perform row and column detection, leading to full table structure recognition and complete digitization capabilities.
     </p>
     <p class="description">
-      You can explore the full implementation and run the models yourself via our Google Colab Notebook. Pre-trained weights for both baseline and fine-tuned models are provided, allowing for immediate evaluation without retraining.
+      You can explore the full implementation and run the models yourself via our Google Colab Notebook. Pre-trained weights for both baseline and fine-tuned models are provided in the GitHub Repo, allowing for immediate evaluation without retraining.
     </p>
+    
     <p class="description">
       You can explore more about TableSnap through the links below:
     </p>

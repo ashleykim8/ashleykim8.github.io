@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-  <link href="../css/prep-time.css" type="text/css" rel="stylesheet">
+  <link href="../css/projects.css" type="text/css" rel="stylesheet">
   <title>Interactive Flashcard Management</title>
 </head>
 <body>
@@ -24,12 +24,11 @@
     <h2>PrepTime: Interactive Flashcard System</h2>
 
     <p class="description">
-      Prep-Time is a dynamic and intuitive web application I developed to empower users in creating, managing, and reviewing their own custom flashcard sets. Designed for efficient learning, it provides a streamlined experience for organizing study materials and fostering knowledge retention.
+      Prep-Time is a dynamic and intuitive web application I developed with a peer to empower users in creating, managing, and reviewing their own custom flashcard sets. This was also my first experience using React, so it served a dual purpose as a learning opportunity. Designed for efficient learning, it provides a streamlined experience for organizing study materials and fostering knowledge retention.
     </p>
     <p class="description">
       The application is built with React for a responsive and interactive frontend, leveraging React Router DOM for seamless navigation between different sections. This modular architecture ensures a clean separation of concerns, making the application easy to maintain and scale.
     </p>
-    <br>
     <h3>Technical Implementation</h3>
     <p class="description">
       I worked with a peer on this project, and I was responsible for the frontend development of PrepTime, focusing on creating a robust and user-friendly flashcard system. Some key technical decisions include:
@@ -42,7 +41,7 @@
         <strong>State Management with useState:</strong> Utilized React's useState hook extensively to manage all dynamic data within the application. This includes tracking the comprehensive list of flashcard sets, input values for new sets and flashcards, and the edit states for individual items. This approach ensures that all changes are immediately reflected across the user interface.
       </li>
       <li>
-        <strong>Dynamic Routing with react-router-dom:</strong> Implemented react-router-dom to enable smooth and dynamic navigation. I used the useNavigate hook for programmatic transitions between pages (f.e. from the sets list to a specific flashcard set's detail page) and useParams to extract unique set IDs from the URL, ensuring the correct set's data is displayed.
+        <strong>Dynamic Routing with react-router-dom:</strong> Implemented react-router-dom to enable smooth and dynamic navigation. I used the useNavigate hook for navigating between pages (f.e. from the sets list to a specific flashcard set's detail page) and useParams to extract unique set IDs from the URL, ensuring the correct set's data is displayed.
       </li>
       <li>
         <strong>Efficient Data Flow via Props:</strong> Designed a clear and efficient data flow using React props. The parent App.js component centrally stores the list of flashcard sets, passing this data and corresponding state update functions (setFlashcardSets) down to child components like FlashcardSets and Flashcards. 

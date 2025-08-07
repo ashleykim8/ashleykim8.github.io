@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="../css/projects.css" type="text/css" rel="stylesheet">
+  <title>Planet Math-Themed Game</title>
+</head>
+<body>
+  <header>
+    <nav class="navigation">
+      <a href="../../index.html" class="home">Ashley Kim</a>
+      <ul class="navlist">
+      <li><a href="../../index.html" class="navlink">Projects</a></li>
+      <li><a href="../public/Ashley_Kim_Resume.pdf" class="navlink">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="div-container">
+    <h2>Planet Math Exporer: A PlayCanvas-based Educational Game for Elementary Math Engagement</h2>
+    <video controls loop class="video">
+      <source src="./images/polymath.mp4" type="video/mp4">
+      This browser does not support the video.
+    </video>
+    
+    <p class="description">
+      As part of my Polymath Jr. REU experience, my team collaborated with Not A Bot, a company that aims to make learning more interactive, and set out to build a math-themed 3D browser game that makes learning engaging for elementary school students (ages 7-10). The game combines interactive gameplay with core math concepts, specifically divisibility, factors, and multiples, wrapped in a playful, outer-space setting.
+    </p>
+    <p class="description">
+      Built using PlayCanvas, a real-time 3D game engine powered by JavaScript and WebGL, the game allows students to explore planets, make decisions under pressure, and learn by doing within their browser.
+    </p>
+    <h3>Gameplay and Mechanics and User Experience</h3>
+    <p class="description">
+      In the game, players pilot a spaceship using the familiar WASD keyboard controls to navigate a galaxy filled with planets. Each planet is labeled with a number, and the player's ship is also assigned a number. The central mechanic revolves around colliding with planets whose numbers are divisible by the ship's number, encouraging players to use quick mental math and recall divisibility rules. To make the challenge more engaging, the game imposes a fuel-based time limit, which forces players to act accurately and swiftly.
+    </p>
+    <p class="description">
+      Every player action receives immediate feedback. Correct collisions are rewarded with a cheerful “Yay!” while incorrect ones trigger an “Oh no!” response. Once all valid planets are visited, the player wins the level. This loop of action, feedback, then anticipation supports a satisfying gameplay cycle and keeps players engaged through multiple levels.
+    </p>
+    <h3>Game Architecture and Technical Design</h3>
+    <p class="description">
+      Our game is structured using an Entity-Component System (ECS), which promotes modularity and reuse. Key components include the MovePlayer.js script, which handles user input, ship rotation, and fuel mechanics. The GameLoop.js script manages the overall game state, ensuring smooth transitions across game phases and levels. PlayerGameLogic.js performs the core math checking to validate player interactions, while SetPlanetNumber.js governs each planet’s individual behavior and logic. Finally, UI rendering is managed by FacePlayer.js, which ensures messages like “Try Again” or “You Win!” always appear in the player's field of view.
+    </p>
+    <p class="description">
+      From a technical standpoint, we built real-time 3D visuals using WebGL via PlayCanvas, implemented physics-based collision detection, and developed a responsive UI system. Our architecture encouraged readable, testable JavaScript code with clear boundaries between gameplay, visual feedback, and logic processing.
+    </p>
+    <h3>My Key Contributions</h3>
+    <p class="description">
+      I was deeply involved in both the technical implementation and educational design of the game. I co-led the development of the planet-divisibility logic, ensuring that the collision detection worked seamlessly with math-based rules. I implemented the UI feedback system, including the scripts that display dynamic messages facing the player in 3D space. Additionally, I helped coordinate the overall game loop, ensuring a smooth player experience that reset properly after mistakes and escalated as users progressed.
+    </p>
+    <p class="description">
+      Beyond gameplay mechanics, I also contributed to designing a strong pedagogical flow. I proposed enhancements to player feedback and helped build the multi-level progression system that tracks learning outcomes. Through careful scripting and architecture, I ensured that every aspect of the game supported the user experience while maintaining clean, maintainable code.
+    </p>
+
+    <br>
+    <p class="description">
+      The experience reflects my strengths in problem-solving, user-centered design, and writing robust, modular code. It also demonstrates my enthusiasm for building applications that make a tangible impact within the education community.
+    </p>
+  </div>
+
+  <footer>
+    <p>© Ashley Kim. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
